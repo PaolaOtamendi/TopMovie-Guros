@@ -40,7 +40,7 @@ const Moviemodal = ({ movie, onClose }) => {
                     <div>
                         <p className="movie-id">{movie.id}</p>
                         <div>
-                            <p>¿De que trata?:</p>
+                            <p className="title-id">¿De que trata?</p>
                             <p className="movie-id">{movie.overview}</p>
                         </div>
                     </div>
@@ -51,11 +51,11 @@ const Moviemodal = ({ movie, onClose }) => {
                         <button key={index} className="genre-button">{genero}</button>
                         ))}
                     </div>
-                    <div>
-                        <p>Cuéntanos ¿te gustó?</p>
-                        <div>Aqui van las estrellas para calificar</div>
-                        <div>
-                            <button>Enviar Calificación</button>
+                    <div className="contain-average">
+                        <p className="title-id">Cuéntanos ¿te gustó?</p>
+                        <div className="contain-stars">Aqui van las estrellas para calificar</div>
+                        <div className="contain-button">
+                            <button className="button-average">Enviar Calificación</button>
                         </div>
                     </div>
                 </div>

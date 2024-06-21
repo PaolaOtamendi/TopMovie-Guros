@@ -24,6 +24,7 @@
 .contain-imagedata{
     width: 332px;
     height: 600px;
+    position: relative;
 }
 
 .contain-modalimage {
@@ -48,7 +49,7 @@
     margin-top: -100px;
     z-index: 1;
     text-align: left;
-    position: relative;
+    position: absolute;
 }
 
 .close {
@@ -59,4 +60,60 @@
     border: 1px solid #ffffff;
     color: #ffffff;
     padding: 8px;
+    cursor: pointer;
+}
+
+.movie-id {
+    color: #5C7284;
+}
+
+.title-id {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18.9px;
+    letter-spacing: 2%;
+    color: #273138;
+}
+
+.contain-moviedata {
+    width: 697px;
+    height: 600px;
+    padding: 16px;
+    gap: 8px;
+}
+
+.parte2 {
+    width: 665px;
+    height: 366px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contain-average {
+    width: 665px;
+    height: 164px;
+    gap: 24px;
+}
+
+.contain-button {
+    display: flex;
+    justify-content: center;
+}
+
+.button-average {
+    width: 357px;
+    position: fixed;
+    height: 57px;
+    border-radius: 8px;
+    padding: 19px 24px;
+    gap: 4px;
+    background-color: #E5004D;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18.98px;
+    letter-spacing: 2%;
 }
