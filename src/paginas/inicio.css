@@ -1,6 +1,6 @@
-.contain-inicio{
+.contain-inicio {
     display: grid;
-    grid-template-columns:60% 40%;
+    grid-template-columns: 60% 40%;
     align-items: center;
     justify-self: center;
     grid-gap: 20px;
@@ -23,20 +23,20 @@
 .contain-parte2 {
     width: 550px;
     height: 178px;
-    gap:8px;
+    gap: 8px;
 }
 
 .p1 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 78px;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 106.64px;
     color: #273138;
 }
 
 .p2 {
     font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 52px;
     line-height: 60.84px;
     color: #4C42E4;
@@ -45,15 +45,35 @@
 .buttonnext {
     width: 63px;
     height: 63px;
-    top: 895px;
     border: none;
     margin-left: auto;
 }
 
-
 @media (max-width: 1024px) {
     .contain-inicio {
         grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+
+    .contain-p1 {
+        font-size: 200px;
+        line-height: 272.75px;
+    }
+
+    .contain-parte2 {
+        width: auto;
+        height: auto;
+        gap: 16px;
+    }
+
+    .p1 {
+        font-size: 64px;
+        line-height: 86.64px;
+    }
+
+    .p2 {
+        font-size: 48px;
+        line-height: 56.84px;
     }
 }
 
@@ -62,10 +82,59 @@
         grid-gap: 10px;
         padding: 0 10px;
     }
+
+    .contain-p1 {
+        font-size: 150px;
+        line-height: 202.75px;
+    }
+
+    .contain-parte2 {
+        width: auto;
+        height: auto;
+        gap: 16px;
+    }
+
+    .p1 {
+        font-size: 48px;
+        line-height: 66.64px;
+    }
+
+    .p2 {
+        font-size: 36px;
+        line-height: 44.84px;
+    }
 }
 
 @media (max-width: 480px) {
     .contain-inicio {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
         padding: 0 5px;
+    }
+
+    .contain-p1 {
+        font-size: 100px;
+        line-height: 132.75px;
+    }
+
+    .contain-parte2 {
+        width: auto;
+        height: auto;
+        gap: 8px;
+    }
+
+    .p1 {
+        font-size: 32px;
+        line-height: 46.64px;
+    }
+
+    .p2 {
+        font-size: 24px;
+        line-height: 32.84px;
+    }
+
+    .buttonnext {
+        width: 50px;
+        height: 50px;
     }
 }
