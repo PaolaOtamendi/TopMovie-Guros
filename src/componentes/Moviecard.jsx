@@ -23,7 +23,7 @@ const Moviecard = ({ movie }) => {
         <img className="image" src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={''} />
         </div>
         <div className="movie-stars">
-            <p>{movie.popularity}
+            <p>{movie.vote_average.toFixed(1)}
             <FontAwesomeIcon className="icon" icon={faStar} style={{color: "#e5004d",}} />
             </p>
         </div>

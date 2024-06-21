@@ -28,3 +28,30 @@
     display: flex;
     flex-direction: row; 
 }
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    padding: 16px 0;
+}
+
+.pagination-buttons {
+    display: flex;
+    width: 337px;
+    height: 39px;
+    gap: 16px;
+}
+
+.buttons {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 160.5px;
+    height: 39px;
+    border: 1px solid #4C42E4;
+    border-radius: 8px;
+    padding: 8px, 24px;
+    color: #4C42E4;
+    opacity: 50%; /* Cambiar por tema de seleccion */
+    transition: background-color 0.3s, opacity 0.3s;
+}

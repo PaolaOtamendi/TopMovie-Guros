@@ -45,13 +45,15 @@ const Home = () => {
                 <Moviecard key={movie.id} movie={movie} />
             ))}
             </div>
+            <div className="pagination-container">
             <div className="pagination-buttons">
-                    <button onClick={handlePrev} disabled={currentPage === 1}>
+                    <button  className="buttons" onClick={handlePrev} disabled={currentPage === 1}>
                         Prev
                     </button>
-                    <button onClick={handleNext} disabled={indexOfLastMovie >= movies.length}>
+                    <button className="buttons" onClick={handleNext} disabled={indexOfLastMovie >= movies.length}>
                         Next
                     </button>
+                </div>
                 </div>
         </div>
         </section>
