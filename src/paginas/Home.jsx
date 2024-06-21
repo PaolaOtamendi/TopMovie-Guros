@@ -1,6 +1,7 @@
 import { Header } from "../componentes/Header";
 import "./home.css"
 import Moviecard from '../componentes/Moviecard';
+import Moviemodal from '../componentes/Moviemodal';
 
 import useObtenerMovies from "../servicios/movies";
 import { useState } from "react";
@@ -8,8 +9,9 @@ import { useState } from "react";
 const Home = () => {
 
     const movies = useObtenerMovies();
-    console.log(movies, 1);
     const [currentPage, setCurrentPage] = useState(1);
+    const [selectedMovie, setSelectedMovie] = useState(null);
+    const [modalOpen, setModalOpen] = useState(false);
     const moviesPerPage = 5;
 
     const indexOfLastMovie = currentPage * moviesPerPage;
@@ -28,6 +30,16 @@ const Home = () => {
         }
     };
 
+    const handleOpenModal= (movie) => {
+        setSelectedMovie(movie);
+        setModalOpen(true);
+    }
+
+    const handleCloseModal = () => {
+        setSelectedMovie(null);
+        setModalOpen(false);
+    };
+
 
     return(
         <section className="contain-all">
@@ -42,7 +54,7 @@ const Home = () => {
             </div>
             <div className="contain-movies">
             {currentMovies.map(movie => (
-                <Moviecard key={movie.id} movie={movie} />
+                <Moviecard key={movie.id} movie={movie} onClick={() => handleOpenModal(movie)} />
             ))}
             </div>
             <div className="pagination-container">
@@ -56,6 +68,9 @@ const Home = () => {
                 </div>
                 </div>
         </div>
+        {modalOpen && <div className="contain-modal">
+                <Moviemodal movie={selectedMovie} onClose={handleCloseModal} />
+            </div>}
         </section>
     );
 };

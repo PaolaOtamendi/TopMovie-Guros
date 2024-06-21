@@ -1,14 +1,11 @@
 import useObtenerGeneros from "../servicios/generos";
 import "./moviecard.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faStar
-} from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 
-const Moviecard = ({ movie }) => {
+const Moviecard = ({ movie, onClick }) => {
     const generos = useObtenerGeneros();
-    console.log(generos, 2);
 
     const nombresGeneros = (ids) => {
         return ids.map(id => {
@@ -18,7 +15,7 @@ const Moviecard = ({ movie }) => {
     };
 
     return(
-    <div className="movie-card">
+    <div className="movie-card" onClick={onClick}>
         <div className="contain-image">
         <img className="image" src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={''} />
         </div>
