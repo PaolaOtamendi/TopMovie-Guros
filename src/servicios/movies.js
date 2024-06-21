@@ -19,7 +19,7 @@ const useObtenerMovies = () => {
             try {
                 const response = await fetch(url, options);
                 const data = await response.json();
-                setMovies(data.results)
+                setMovies(data.results);
             } catch (error) {
                 console.error('Error:', error);
             }
@@ -28,7 +28,7 @@ const useObtenerMovies = () => {
         obtenerMovies();
     }, []);
 
-    return movies
+    return movies;
 };
 
 export default useObtenerMovies;

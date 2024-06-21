@@ -1,0 +1,68 @@
+.contain-image {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    overflow: hidden;
+}
+
+.movie-stars {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700px;
+    font-size: 24px;
+    line-height: 32.4px;
+    letter-spacing: 2%;
+    color: #fff;
+    margin-top: -65px;
+    z-index: 1;
+    text-align: right;
+    padding: 4px, 16px;
+}
+
+.icon {
+    top: 3px;
+    left: 2px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+
+.movie-name {
+    font-weight: 700px;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 2%;
+    color: #273138;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+.movie-id {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22.4px;
+    letter-spacing: 2%;
+    margin: 5px;
+}
+
+.movie-generos {
+    margin-top: 10px;
+    text-align: right;
+}
+
+
+.genre-button {
+    display: inline-block;
+    padding: 4px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border: 1px solid #4C42E4;
+    border-radius: 22px;
+    background-color: transparent;
+    color: #4C42E4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
