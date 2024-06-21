@@ -1,18 +1,55 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faRectangleXmark } from "@fortawesome/free-solid-svg-icons";
+import { Rating } from '@mui/material';
+import Swal from 'sweetalert2';
 import "./moviemodal.css"
 
 import useObtenerGeneros from "../servicios/generos";
+import { useState } from "react";
 
 const Moviemodal = ({ movie, onClose }) => {
     const generos = useObtenerGeneros();
-    console.log(generos, 2);
+    const [rating, setRating] = useState(0);
 
     const nombresGeneros = (ids) => {
         return ids.map(id => {
             const genero = generos.find(g => g.id === id);
             return genero ? genero.name : 'Desconocido';
         }).slice(0,3);
+    };
+
+    const handleRatingChange = (e, newRating) => {
+        setRating(newRating);
+    };
+
+    const handleSendRating = () => {
+        if(rating >0) {
+        Swal.fire({
+            text: 'Tu calificación se registró correctamente',
+            icon: 'success',
+            confirmButtonText: 'X',
+            customClass: {
+                container: 'my-swal-container',
+                popup: 'my-swal-popup',
+                icon: 'my-swal-icon',
+                text: 'my-swal-text',
+                confirmButton: 'swal2-confirm',
+            }
+        });
+    } else {
+        Swal.fire({
+            text: 'Por favor selecciona un rating antes de enviar la calificación',
+            icon: 'warning',
+            confirmButtonText: 'OK',
+            customClass: {
+                container: 'my-swal-container',
+                popup: 'my-swal-popup',
+                icon: 'my-swal-icon',
+                text: 'my-swal-text',
+                confirmButton: 'swal2-confirm',
+            }
+        });
+        }
     };
 
     return (
@@ -52,10 +89,22 @@ const Moviemodal = ({ movie, onClose }) => {
                         ))}
                     </div>
                     <div className="contain-average">
+                        <div className="title-container">
                         <p className="title-id">Cuéntanos ¿te gustó?</p>
-                        <div className="contain-stars">Aqui van las estrellas para calificar</div>
+                        </div>
+                        <div className="contain-stars">
+                            <Rating
+                            className="stars"
+                            name="movie-rating"
+                            value={rating}
+                            onChange={handleRatingChange}
+                            precision={0.5}
+                            icon={<FontAwesomeIcon icon={faStar} style={{ color: '#E5004D', fontSize: '40px' }} />}
+                            emptyIcon={<FontAwesomeIcon icon={faStar} style={{ color: '#ddd', fontSize: '40px' }} />}
+                            />
+                            </div>
                         <div className="contain-button">
-                            <button className="button-average">Enviar Calificación</button>
+                            <button className="button-average" onClick={handleSendRating}>Enviar Calificación</button>
                         </div>
                     </div>
                 </div>

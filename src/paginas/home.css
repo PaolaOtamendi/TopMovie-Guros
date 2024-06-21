@@ -52,6 +52,6 @@
     border-radius: 8px;
     padding: 8px, 24px;
     color: #4C42E4;
-    opacity: 50%; /* Cambiar por tema de seleccion */
+    /*opacity: 50%;  Cambiar por tema de seleccion */
     transition: background-color 0.3s, opacity 0.3s;
 }
