@@ -55,3 +55,40 @@
     /*opacity: 50%;  Cambiar por tema de seleccion */
     transition: background-color 0.3s, opacity 0.3s;
 }
+
+@media (max-width: 1024px) {
+    .contain-general {
+        grid-template-columns: 1fr;
+    }
+
+    .contain-movies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 768px) {
+    .contain-general {
+        grid-gap: 10px;
+        padding: 0 10px;
+    }
+
+    .contain-movies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 480px) {
+    .contain-general {
+        padding: 0 5px;
+    }
+
+    .contain-movies {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
