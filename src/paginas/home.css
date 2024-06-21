@@ -26,6 +26,5 @@
 
 .contain-movies {
     display: flex;
-    flex-direction: row;
-    gap: 1px;
+    flex-direction: row; 
 }

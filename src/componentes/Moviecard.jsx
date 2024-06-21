@@ -14,7 +14,7 @@ const Moviecard = ({ movie }) => {
         return ids.map(id => {
             const genero = generos.find(g => g.id === id);
             return genero ? genero.name : 'Desconocido';
-        });
+        }).slice(0,3);
     };
 
     return(
@@ -27,16 +27,16 @@ const Moviecard = ({ movie }) => {
             <FontAwesomeIcon className="icon" icon={faStar} style={{color: "#e5004d",}} />
             </p>
         </div>
-        <div className="movie-name">
-            <p>{movie.title}</p>
-        </div>
-        <div className="movie-id">
-            <p>{movie.id}</p>
+        <div className="contain-text">
+        <div className="contain-titles">
+            <p className="movie-name">{movie.title}</p>
+            <p className="movie-id">{movie.id}</p>
         </div>
         <div className="movie-generos">
         {nombresGeneros(movie.genre_ids).map((genero, index) => (
                     <button key={index} className="genre-button">{genero}</button>
                 ))}
+        </div>
         </div>
     </div>
     );
