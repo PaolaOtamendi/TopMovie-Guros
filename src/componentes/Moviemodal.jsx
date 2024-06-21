@@ -58,7 +58,7 @@ const Moviemodal = ({ movie, onClose }) => {
                 <div className="contain-modalimage">
                     <img className="modal-image" src={`http://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt={''} />
                 </div>
-                <div className="movie-stars">
+                <div className="movie-aver">
                     <p>{movie.vote_average.toFixed(1)}
                     <FontAwesomeIcon className="icon" icon={faStar} style={{color: "#e5004d",}} />
                     </p>
